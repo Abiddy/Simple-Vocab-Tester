@@ -1,0 +1,30 @@
+str = input(
+    "I'll judge your vocabulary. Tell me about you in a few sentences, don't hold back!: ")
+
+words = str.split()
+totalWords = len(words)
+
+smallWords = 0
+mediumWords = 0
+largeWords = 0
+
+for x in words:
+
+    if len(x) <= 4:
+        smallWords += 1
+    if 4 < len(x) <= 8:
+        mediumWords += 1
+    if len(x) > 8:
+        largeWords += 1
+
+
+if (largeWords > (5/100)*totalWords):
+    print("Omg wow, your vocabulary is pretty good")
+
+elif (mediumWords > (30/100)*totalWords):
+    print("Vocabulary is okay, you can work on it lol ")
+
+elif (smallWords > (95/100)*totalWords):
+    print("Please go pick up a dictionary, your vocab is pretty bad lol")
+
+    print(totalWords)
